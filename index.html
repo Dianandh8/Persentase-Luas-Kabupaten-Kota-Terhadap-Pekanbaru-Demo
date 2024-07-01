@@ -59,7 +59,7 @@
 		// eh ... kamsud saya pusatkan peta di sukajadi, zoom 14
 		var map = L.map('map').setView(
 			sukajadi
-			, 11
+			, 8
 		);
     //update: sekarang pakai fitBounds
 
@@ -151,7 +151,7 @@ carto_positron_lite_rainbow.addTo(map);
 
 		info.update = function (props) {
 			this._div.innerHTML = '<h4>Persentase Luas Kabupaten Kota Terhadap Pekanbaru Tahun 2022</h4>' +  (props ?
-				'<b>' + props.dist.ina + '</b><br />' + props.tbc + ' orang'
+				'<b>' + props.dist.ina + '</b><br />' + props.tbc + ' %'
 				: 'Gerakkan mouse Anda');
 		};
 
