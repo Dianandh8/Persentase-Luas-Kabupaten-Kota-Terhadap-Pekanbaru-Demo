@@ -50,7 +50,7 @@
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
   
 	<!--script type="text/javascript" src="https://gist.github.com/kampar/430220edbe06c3237e66/raw/ca02fb8bcffc0523832070d231ba9592918e0b3f/kelurahan.js"></script-->
-  <script src="kelurahan.js"></script>
+  <script src="riau_kabkot.geojson"></script>
 	<script type="text/javascript">
 		//perhatikan bahwa format di sini adalah LatLong, sedangkan di JSON adalah LongLat
 		var sukajadi=[0.526452500644619,101.43842513074193]; 
@@ -150,8 +150,8 @@ carto_positron_lite_rainbow.addTo(map);
 		};
 
 		info.update = function (props) {
-			this._div.innerHTML = '<h4>Mahasiswa Sistem Informasi</h4>' +  (props ?
-				'<b>' + props.Kelurahan + '</b><br />' + props.MhsSIF + ' orang'
+			this._div.innerHTML = '<h4>Persentase Luas Kabupaten/Kota</h4>' +  (props ?
+				'<b>' + props.dist.ina + '</b><br />' + props.tbc + ' orang'
 				: 'Gerakkan mouse Anda');
 		};
 
@@ -219,7 +219,7 @@ carto_positron_lite_rainbow.addTo(map);
 			});
 		}
 
-		geojson = L.geoJson(kelurahan, {
+		geojson = L.geoJson(riautbc, {
 			zIndex:2,
       style: style,
 			onEachFeature: onEachFeature
