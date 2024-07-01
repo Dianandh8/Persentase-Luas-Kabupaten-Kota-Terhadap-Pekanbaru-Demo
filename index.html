@@ -150,7 +150,7 @@ carto_positron_lite_rainbow.addTo(map);
 		};
 
 		info.update = function (props) {
-			this._div.innerHTML = '<h4>Persentase Luas Kabupaten/Kota</h4>' +  (props ?
+			this._div.innerHTML = '<h4>Persentase Luas Kabupaten Kota Terhadap Pekanbaru Tahun 2022</h4>' +  (props ?
 				'<b>' + props.dist.ina + '</b><br />' + props.tbc + ' orang'
 				: 'Gerakkan mouse Anda');
 		};
@@ -179,7 +179,7 @@ carto_positron_lite_rainbow.addTo(map);
 				color: 'white',
 				dashArray: '3',
 				fillOpacity: 0.7,
-				fillColor: getColor(feature.properties.MhsSIF)
+				fillColor: getColor(feature.properties.tbc)
 			};
 		}
 
